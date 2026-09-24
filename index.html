@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            background: white;
+            width: 350px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Sum Calculator</h2>
+
+        <input type="number" id="num" placeholder="Enter the number">
+
+        <br>
+
+        <button onclick="calculateSum()">Calculate Sum</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateSum() {
+            let num = parseInt(document.getElementById("num").value);
+            let s = 0;
+
+            for (let i = 1; i <= num; i++) {
+                s = s + i;
+            }
+
+            document.getElementById("result").innerHTML = "Sum is " + s;
+        }
+    </script>
+
+</body>
+</html>
